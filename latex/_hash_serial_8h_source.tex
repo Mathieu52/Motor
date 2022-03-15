@@ -1,0 +1,52 @@
+\hypertarget{_hash_serial_8h_source}{}\doxysection{Hash\+Serial.\+h}
+\label{_hash_serial_8h_source}\index{src/HashSerial.h@{src/HashSerial.h}}
+\mbox{\hyperlink{_hash_serial_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef HashSerial\_h}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define HashSerial\_h}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}Arduino.h"{}}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{keyword}{class }\mbox{\hyperlink{class_hash_serial}{HashSerial}} \{}
+\DoxyCodeLine{6   \textcolor{keyword}{public}:}
+\DoxyCodeLine{7     \mbox{\hyperlink{class_hash_serial_a3ba440a5e2b3cf170e91f4c3d4d3cdaa}{HashSerial}}(HardwareSerial \&serial);}
+\DoxyCodeLine{8     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_hash_serial_a7b5e28f89a56052dfad2077f24c03a9d}{begin}}(\textcolor{keywordtype}{long} speed);}
+\DoxyCodeLine{9     String \mbox{\hyperlink{class_hash_serial_a408c006d67428cb35a48d201120d9870}{update}}();}
+\DoxyCodeLine{10     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_hash_serial_a38c88aca98f27ca71ba8e540a079e681}{end}}();}
+\DoxyCodeLine{11     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_hash_serial_adcd451d504d6a2b02e6ea3a13a79d214}{available}}();}
+\DoxyCodeLine{12     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_hash_serial_aaafae66ededbb19151df8103e8f5b845}{availableForWrite}}();}
+\DoxyCodeLine{13     }
+\DoxyCodeLine{14     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{class_hash_serial_a2a92bec9bd9337fdfac5f563f393ba1c}{send}}(\textcolor{keyword}{const} String \&s);}
+\DoxyCodeLine{15     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{class_hash_serial_a2a92bec9bd9337fdfac5f563f393ba1c}{send}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} str[]);}
+\DoxyCodeLine{16     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{class_hash_serial_a2a92bec9bd9337fdfac5f563f393ba1c}{send}}(\textcolor{keywordtype}{char} c);}
+\DoxyCodeLine{17     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{class_hash_serial_a2a92bec9bd9337fdfac5f563f393ba1c}{send}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} b, \textcolor{keywordtype}{int} base);}
+\DoxyCodeLine{18     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{class_hash_serial_a2a92bec9bd9337fdfac5f563f393ba1c}{send}}(\textcolor{keywordtype}{int} n, \textcolor{keywordtype}{int} base);}
+\DoxyCodeLine{19     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{class_hash_serial_a2a92bec9bd9337fdfac5f563f393ba1c}{send}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} n, \textcolor{keywordtype}{int} base);}
+\DoxyCodeLine{20     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{class_hash_serial_a2a92bec9bd9337fdfac5f563f393ba1c}{send}}(\textcolor{keywordtype}{long} n, \textcolor{keywordtype}{int} base);}
+\DoxyCodeLine{21     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{class_hash_serial_a2a92bec9bd9337fdfac5f563f393ba1c}{send}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} n, \textcolor{keywordtype}{int} base);}
+\DoxyCodeLine{22     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{class_hash_serial_a2a92bec9bd9337fdfac5f563f393ba1c}{send}}(\textcolor{keywordtype}{double} n, \textcolor{keywordtype}{int} digits);}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24     String \mbox{\hyperlink{class_hash_serial_a7e114c179d635688e4009b50954b5e11}{readMessage}}();}
+\DoxyCodeLine{25     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_hash_serial_af3ea8c6e1a72d2eff0773cbdc2010591}{attachProcedure}}(\textcolor{keywordtype}{void} (*procedure)(String message));}
+\DoxyCodeLine{26     }
+\DoxyCodeLine{27     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_hash_serial_a2e7bcb5c5a8099fd85a04fa7972c1ca5}{setAcknowledgedTimeout}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} time);}
+\DoxyCodeLine{28     }
+\DoxyCodeLine{29   \textcolor{keyword}{private}:}
+\DoxyCodeLine{30     HardwareSerial *serial;}
+\DoxyCodeLine{31     \textcolor{keywordtype}{size\_t} writeHash(String key);}
+\DoxyCodeLine{32     \textcolor{keywordtype}{void} sendAcknowledge();}
+\DoxyCodeLine{33     String last\_sent\_message = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{34     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} time\_since\_message;}
+\DoxyCodeLine{35     \textcolor{keywordtype}{boolean} message\_acknowledged = \textcolor{keyword}{true};}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37     \textcolor{keywordtype}{unsigned} acknowledged\_timeout = 100;}
+\DoxyCodeLine{38     String message = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40     void (*procedure)(String message);}
+\DoxyCodeLine{41     }
+\DoxyCodeLine{42     \textcolor{keyword}{static} String generateHashCode(\textcolor{keywordtype}{char}* key);}
+\DoxyCodeLine{43     \textcolor{keyword}{static} \textcolor{keyword}{const} \textcolor{keywordtype}{int} hashStrLength = 9;}
+\DoxyCodeLine{44     \textcolor{keyword}{static} \textcolor{keyword}{const} \textcolor{keywordtype}{char} acknowledgeControlCharacter = 0x06;}
+\DoxyCodeLine{45 \};}
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

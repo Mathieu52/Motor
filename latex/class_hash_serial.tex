@@ -1,0 +1,233 @@
+\hypertarget{class_hash_serial}{}\doxysection{Hash\+Serial Class Reference}
+\label{class_hash_serial}\index{HashSerial@{HashSerial}}
+
+
+{\ttfamily \#include $<$Hash\+Serial.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_hash_serial_a3ba440a5e2b3cf170e91f4c3d4d3cdaa}{Hash\+Serial}} (Hardware\+Serial \&serial)
+\item 
+void \mbox{\hyperlink{class_hash_serial_a7b5e28f89a56052dfad2077f24c03a9d}{begin}} (long speed)
+\item 
+String \mbox{\hyperlink{class_hash_serial_a408c006d67428cb35a48d201120d9870}{update}} ()
+\item 
+void \mbox{\hyperlink{class_hash_serial_a38c88aca98f27ca71ba8e540a079e681}{end}} ()
+\item 
+int \mbox{\hyperlink{class_hash_serial_adcd451d504d6a2b02e6ea3a13a79d214}{available}} ()
+\item 
+int \mbox{\hyperlink{class_hash_serial_aaafae66ededbb19151df8103e8f5b845}{available\+For\+Write}} ()
+\item 
+size\+\_\+t \mbox{\hyperlink{class_hash_serial_a2a92bec9bd9337fdfac5f563f393ba1c}{send}} (const String \&s)
+\item 
+size\+\_\+t \mbox{\hyperlink{class_hash_serial_a55ccbb6fdfb00b574848342e6dc955b3}{send}} (const char str\mbox{[}$\,$\mbox{]})
+\item 
+size\+\_\+t \mbox{\hyperlink{class_hash_serial_a79fa3f04d152363f08f2b59a9852fb70}{send}} (char c)
+\item 
+size\+\_\+t \mbox{\hyperlink{class_hash_serial_a7740039485a40238bceda0785a8c8dba}{send}} (unsigned char b, int base)
+\item 
+size\+\_\+t \mbox{\hyperlink{class_hash_serial_ab753fd6b279c6d7219a80c367cfd8a29}{send}} (int n, int base)
+\item 
+size\+\_\+t \mbox{\hyperlink{class_hash_serial_a97082abf84d1b7dad75baddc04a93873}{send}} (unsigned int n, int base)
+\item 
+size\+\_\+t \mbox{\hyperlink{class_hash_serial_a3ebdef0b231206a49414fa23b5071664}{send}} (long n, int base)
+\item 
+size\+\_\+t \mbox{\hyperlink{class_hash_serial_a31a53b3371726af230eedd98a367e08a}{send}} (unsigned long n, int base)
+\item 
+size\+\_\+t \mbox{\hyperlink{class_hash_serial_a80b01a94f5befeb6e6a29822951a89d6}{send}} (double n, int digits)
+\item 
+String \mbox{\hyperlink{class_hash_serial_a7e114c179d635688e4009b50954b5e11}{read\+Message}} ()
+\item 
+void \mbox{\hyperlink{class_hash_serial_af3ea8c6e1a72d2eff0773cbdc2010591}{attach\+Procedure}} (void($\ast$procedure)(String message))
+\item 
+void \mbox{\hyperlink{class_hash_serial_a2e7bcb5c5a8099fd85a04fa7972c1ca5}{set\+Acknowledged\+Timeout}} (unsigned long time)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_hash_serial_a3ba440a5e2b3cf170e91f4c3d4d3cdaa}\label{class_hash_serial_a3ba440a5e2b3cf170e91f4c3d4d3cdaa}} 
+\index{HashSerial@{HashSerial}!HashSerial@{HashSerial}}
+\index{HashSerial@{HashSerial}!HashSerial@{HashSerial}}
+\doxysubsubsection{\texorpdfstring{HashSerial()}{HashSerial()}}
+{\footnotesize\ttfamily Hash\+Serial\+::\+Hash\+Serial (\begin{DoxyParamCaption}\item[{Hardware\+Serial \&}]{serial }\end{DoxyParamCaption})}
+
+Constructor of \mbox{\hyperlink{class_hash_serial}{Hash\+Serial}} 
+\begin{DoxyParams}{Parameters}
+{\em serial} & \+: Hardware\+Serial, Serial used to send data \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_hash_serial_af3ea8c6e1a72d2eff0773cbdc2010591}\label{class_hash_serial_af3ea8c6e1a72d2eff0773cbdc2010591}} 
+\index{HashSerial@{HashSerial}!attachProcedure@{attachProcedure}}
+\index{attachProcedure@{attachProcedure}!HashSerial@{HashSerial}}
+\doxysubsubsection{\texorpdfstring{attachProcedure()}{attachProcedure()}}
+{\footnotesize\ttfamily void Hash\+Serial\+::attach\+Procedure (\begin{DoxyParamCaption}\item[{void($\ast$)(String message)}]{procedure }\end{DoxyParamCaption})}
+
+Attach a function to hash\+Serial. 
+\begin{DoxyParams}{Parameters}
+{\em procedure} & \+: function that will be executed when a valid message is received \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_hash_serial_adcd451d504d6a2b02e6ea3a13a79d214}\label{class_hash_serial_adcd451d504d6a2b02e6ea3a13a79d214}} 
+\index{HashSerial@{HashSerial}!available@{available}}
+\index{available@{available}!HashSerial@{HashSerial}}
+\doxysubsubsection{\texorpdfstring{available()}{available()}}
+{\footnotesize\ttfamily int Hash\+Serial\+::available (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the number of bytes (characters) available for reading from the serial port. This is data that’s already arrived and stored in the serial receive buffer (which holds 64 bytes). \begin{DoxyReturn}{Returns}
+The number of bytes available to read. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_hash_serial_aaafae66ededbb19151df8103e8f5b845}\label{class_hash_serial_aaafae66ededbb19151df8103e8f5b845}} 
+\index{HashSerial@{HashSerial}!availableForWrite@{availableForWrite}}
+\index{availableForWrite@{availableForWrite}!HashSerial@{HashSerial}}
+\doxysubsubsection{\texorpdfstring{availableForWrite()}{availableForWrite()}}
+{\footnotesize\ttfamily int Hash\+Serial\+::available\+For\+Write (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the number of bytes (characters) available for writing in the serial buffer without blocking the write operation. \begin{DoxyReturn}{Returns}
+The number of bytes available to write. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_hash_serial_a7b5e28f89a56052dfad2077f24c03a9d}\label{class_hash_serial_a7b5e28f89a56052dfad2077f24c03a9d}} 
+\index{HashSerial@{HashSerial}!begin@{begin}}
+\index{begin@{begin}!HashSerial@{HashSerial}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily void Hash\+Serial\+::begin (\begin{DoxyParamCaption}\item[{long}]{speed }\end{DoxyParamCaption})}
+
+Sets the data rate in bits per second (baud) for serial data transmission. 
+\begin{DoxyParams}{Parameters}
+{\em speed} & \+: in bits per second (baud). Allowed data types\+: long. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_hash_serial_a38c88aca98f27ca71ba8e540a079e681}\label{class_hash_serial_a38c88aca98f27ca71ba8e540a079e681}} 
+\index{HashSerial@{HashSerial}!end@{end}}
+\index{end@{end}!HashSerial@{HashSerial}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily void Hash\+Serial\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Disables serial communication, allowing the RX and TX pins to be used for general input and output. To re-\/enable serial communication, call {\ttfamily \mbox{\hyperlink{class_hash_serial_a7b5e28f89a56052dfad2077f24c03a9d}{Hash\+Serial.\+begin()}}}. \mbox{\Hypertarget{class_hash_serial_a7e114c179d635688e4009b50954b5e11}\label{class_hash_serial_a7e114c179d635688e4009b50954b5e11}} 
+\index{HashSerial@{HashSerial}!readMessage@{readMessage}}
+\index{readMessage@{readMessage}!HashSerial@{HashSerial}}
+\doxysubsubsection{\texorpdfstring{readMessage()}{readMessage()}}
+{\footnotesize\ttfamily String Hash\+Serial\+::read\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieve the last received message. \begin{DoxyReturn}{Returns}
+Last received message. Data type\+: String. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_hash_serial_a79fa3f04d152363f08f2b59a9852fb70}\label{class_hash_serial_a79fa3f04d152363f08f2b59a9852fb70}} 
+\index{HashSerial@{HashSerial}!send@{send}}
+\index{send@{send}!HashSerial@{HashSerial}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}\hspace{0.1cm}{\footnotesize\ttfamily [1/9]}}
+{\footnotesize\ttfamily size\+\_\+t Hash\+Serial\+::send (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})}
+
+Prints data to the serial port as human-\/readable ASCII text preceded by it\textquotesingle{}s hexadecimal hash code, followed by a carriage return character (ASCII 13, or \textquotesingle{}\textbackslash{}r\textquotesingle{}) and a newline character (ASCII 10, or \textquotesingle{}~\newline
+\textquotesingle{}). \begin{DoxyReturn}{Returns}
+returns the number of bytes written, though reading that number is optional. Data type\+: size\+\_\+t. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_hash_serial_a55ccbb6fdfb00b574848342e6dc955b3}\label{class_hash_serial_a55ccbb6fdfb00b574848342e6dc955b3}} 
+\index{HashSerial@{HashSerial}!send@{send}}
+\index{send@{send}!HashSerial@{HashSerial}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}\hspace{0.1cm}{\footnotesize\ttfamily [2/9]}}
+{\footnotesize\ttfamily size\+\_\+t Hash\+Serial\+::send (\begin{DoxyParamCaption}\item[{const char}]{str\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+Prints data to the serial port as human-\/readable ASCII text preceded by it\textquotesingle{}s hexadecimal hash code, followed by a carriage return character (ASCII 13, or \textquotesingle{}\textbackslash{}r\textquotesingle{}) and a newline character (ASCII 10, or \textquotesingle{}~\newline
+\textquotesingle{}). \begin{DoxyReturn}{Returns}
+returns the number of bytes written, though reading that number is optional. Data type\+: size\+\_\+t. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_hash_serial_a2a92bec9bd9337fdfac5f563f393ba1c}\label{class_hash_serial_a2a92bec9bd9337fdfac5f563f393ba1c}} 
+\index{HashSerial@{HashSerial}!send@{send}}
+\index{send@{send}!HashSerial@{HashSerial}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}\hspace{0.1cm}{\footnotesize\ttfamily [3/9]}}
+{\footnotesize\ttfamily size\+\_\+t Hash\+Serial\+::send (\begin{DoxyParamCaption}\item[{const String \&}]{s }\end{DoxyParamCaption})}
+
+Prints data to the serial port as human-\/readable ASCII text preceded by it\textquotesingle{}s hexadecimal hash code, followed by a carriage return character (ASCII 13, or \textquotesingle{}\textbackslash{}r\textquotesingle{}) and a newline character (ASCII 10, or \textquotesingle{}~\newline
+\textquotesingle{}). \begin{DoxyReturn}{Returns}
+returns the number of bytes written, though reading that number is optional. Data type\+: size\+\_\+t. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_hash_serial_a80b01a94f5befeb6e6a29822951a89d6}\label{class_hash_serial_a80b01a94f5befeb6e6a29822951a89d6}} 
+\index{HashSerial@{HashSerial}!send@{send}}
+\index{send@{send}!HashSerial@{HashSerial}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}\hspace{0.1cm}{\footnotesize\ttfamily [4/9]}}
+{\footnotesize\ttfamily size\+\_\+t Hash\+Serial\+::send (\begin{DoxyParamCaption}\item[{double}]{n,  }\item[{int}]{digits }\end{DoxyParamCaption})}
+
+Prints data to the serial port as human-\/readable ASCII text preceded by it\textquotesingle{}s hexadecimal hash code, followed by a carriage return character (ASCII 13, or \textquotesingle{}\textbackslash{}r\textquotesingle{}) and a newline character (ASCII 10, or \textquotesingle{}~\newline
+\textquotesingle{}). \begin{DoxyReturn}{Returns}
+returns the number of bytes written, though reading that number is optional. Data type\+: size\+\_\+t. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_hash_serial_ab753fd6b279c6d7219a80c367cfd8a29}\label{class_hash_serial_ab753fd6b279c6d7219a80c367cfd8a29}} 
+\index{HashSerial@{HashSerial}!send@{send}}
+\index{send@{send}!HashSerial@{HashSerial}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}\hspace{0.1cm}{\footnotesize\ttfamily [5/9]}}
+{\footnotesize\ttfamily size\+\_\+t Hash\+Serial\+::send (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{int}]{base }\end{DoxyParamCaption})}
+
+Prints data to the serial port as human-\/readable ASCII text preceded by it\textquotesingle{}s hexadecimal hash code, followed by a carriage return character (ASCII 13, or \textquotesingle{}\textbackslash{}r\textquotesingle{}) and a newline character (ASCII 10, or \textquotesingle{}~\newline
+\textquotesingle{}). \begin{DoxyReturn}{Returns}
+returns the number of bytes written, though reading that number is optional. Data type\+: size\+\_\+t. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_hash_serial_a3ebdef0b231206a49414fa23b5071664}\label{class_hash_serial_a3ebdef0b231206a49414fa23b5071664}} 
+\index{HashSerial@{HashSerial}!send@{send}}
+\index{send@{send}!HashSerial@{HashSerial}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}\hspace{0.1cm}{\footnotesize\ttfamily [6/9]}}
+{\footnotesize\ttfamily size\+\_\+t Hash\+Serial\+::send (\begin{DoxyParamCaption}\item[{long}]{n,  }\item[{int}]{base }\end{DoxyParamCaption})}
+
+Prints data to the serial port as human-\/readable ASCII text preceded by it\textquotesingle{}s hexadecimal hash code, followed by a carriage return character (ASCII 13, or \textquotesingle{}\textbackslash{}r\textquotesingle{}) and a newline character (ASCII 10, or \textquotesingle{}~\newline
+\textquotesingle{}). \begin{DoxyReturn}{Returns}
+returns the number of bytes written, though reading that number is optional. Data type\+: size\+\_\+t. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_hash_serial_a7740039485a40238bceda0785a8c8dba}\label{class_hash_serial_a7740039485a40238bceda0785a8c8dba}} 
+\index{HashSerial@{HashSerial}!send@{send}}
+\index{send@{send}!HashSerial@{HashSerial}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}\hspace{0.1cm}{\footnotesize\ttfamily [7/9]}}
+{\footnotesize\ttfamily size\+\_\+t Hash\+Serial\+::send (\begin{DoxyParamCaption}\item[{unsigned char}]{b,  }\item[{int}]{base }\end{DoxyParamCaption})}
+
+Prints data to the serial port as human-\/readable ASCII text preceded by it\textquotesingle{}s hexadecimal hash code, followed by a carriage return character (ASCII 13, or \textquotesingle{}\textbackslash{}r\textquotesingle{}) and a newline character (ASCII 10, or \textquotesingle{}~\newline
+\textquotesingle{}). \begin{DoxyReturn}{Returns}
+returns the number of bytes written, though reading that number is optional. Data type\+: size\+\_\+t. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_hash_serial_a97082abf84d1b7dad75baddc04a93873}\label{class_hash_serial_a97082abf84d1b7dad75baddc04a93873}} 
+\index{HashSerial@{HashSerial}!send@{send}}
+\index{send@{send}!HashSerial@{HashSerial}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}\hspace{0.1cm}{\footnotesize\ttfamily [8/9]}}
+{\footnotesize\ttfamily size\+\_\+t Hash\+Serial\+::send (\begin{DoxyParamCaption}\item[{unsigned int}]{n,  }\item[{int}]{base }\end{DoxyParamCaption})}
+
+Prints data to the serial port as human-\/readable ASCII text preceded by it\textquotesingle{}s hexadecimal hash code, followed by a carriage return character (ASCII 13, or \textquotesingle{}\textbackslash{}r\textquotesingle{}) and a newline character (ASCII 10, or \textquotesingle{}~\newline
+\textquotesingle{}). \begin{DoxyReturn}{Returns}
+returns the number of bytes written, though reading that number is optional. Data type\+: size\+\_\+t. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_hash_serial_a31a53b3371726af230eedd98a367e08a}\label{class_hash_serial_a31a53b3371726af230eedd98a367e08a}} 
+\index{HashSerial@{HashSerial}!send@{send}}
+\index{send@{send}!HashSerial@{HashSerial}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}\hspace{0.1cm}{\footnotesize\ttfamily [9/9]}}
+{\footnotesize\ttfamily size\+\_\+t Hash\+Serial\+::send (\begin{DoxyParamCaption}\item[{unsigned long}]{n,  }\item[{int}]{base }\end{DoxyParamCaption})}
+
+Prints data to the serial port as human-\/readable ASCII text preceded by it\textquotesingle{}s hexadecimal hash code, followed by a carriage return character (ASCII 13, or \textquotesingle{}\textbackslash{}r\textquotesingle{}) and a newline character (ASCII 10, or \textquotesingle{}~\newline
+\textquotesingle{}). \begin{DoxyReturn}{Returns}
+returns the number of bytes written, though reading that number is optional. Data type\+: size\+\_\+t. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_hash_serial_a2e7bcb5c5a8099fd85a04fa7972c1ca5}\label{class_hash_serial_a2e7bcb5c5a8099fd85a04fa7972c1ca5}} 
+\index{HashSerial@{HashSerial}!setAcknowledgedTimeout@{setAcknowledgedTimeout}}
+\index{setAcknowledgedTimeout@{setAcknowledgedTimeout}!HashSerial@{HashSerial}}
+\doxysubsubsection{\texorpdfstring{setAcknowledgedTimeout()}{setAcknowledgedTimeout()}}
+{\footnotesize\ttfamily void Hash\+Serial\+::set\+Acknowledged\+Timeout (\begin{DoxyParamCaption}\item[{unsigned long}]{time }\end{DoxyParamCaption})}
+
+Sets the maximum milliseconds to wait for Acknowledgedment before resending message. It defaults to 100 milliseconds. 
+\begin{DoxyParams}{Parameters}
+{\em time} & \+: timeout duration in milliseconds. Allowed data types\+: unsigned long. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_hash_serial_a408c006d67428cb35a48d201120d9870}\label{class_hash_serial_a408c006d67428cb35a48d201120d9870}} 
+\index{HashSerial@{HashSerial}!update@{update}}
+\index{update@{update}!HashSerial@{HashSerial}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily String Hash\+Serial\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Look for confirmation that the last sent message has been received as well as look for received message (make sure they are valid, if valid trigger attached procedure) \begin{DoxyReturn}{Returns}
+String, A valid message in other case a blank string 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{_hash_serial_8h}{Hash\+Serial.\+h}}\item 
+src/\mbox{\hyperlink{_hash_serial_8cpp}{Hash\+Serial.\+cpp}}\end{DoxyCompactItemize}
