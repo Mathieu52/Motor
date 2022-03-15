@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.3" xml:lang="en-US">
+  <compound refid="class_hash_serial" kind="class"><name>HashSerial</name>
+    <member refid="class_hash_serial_1a0f0756ae23b2ba0814760540250dc6a7" kind="variable"><name>serial</name></member>
+    <member refid="class_hash_serial_1ace0a62eb72cc1363742b6877e146113f" kind="variable"><name>last_sent_message</name></member>
+    <member refid="class_hash_serial_1a7c65e68572495488cf5b555a3eaa3596" kind="variable"><name>time_since_message</name></member>
+    <member refid="class_hash_serial_1adbcbe3fe9f4d9ac6a1e41d05bd98f107" kind="variable"><name>message_acknowledged</name></member>
+    <member refid="class_hash_serial_1a22bf09e08e78e568a448ea3c011b7319" kind="variable"><name>acknowledged_timeout</name></member>
+    <member refid="class_hash_serial_1a9bc643eb0eb90c3ffb8c1d5247dd0244" kind="variable"><name>message</name></member>
+    <member refid="class_hash_serial_1af9a6d6a1a2c743000428e78455ff2e22" kind="variable"><name>procedure</name></member>
+    <member refid="class_hash_serial_1a4e6b7273dbbcbbe431eda7175fca4a48" kind="variable"><name>hashStrLength</name></member>
+    <member refid="class_hash_serial_1ac2aaf333c45e91e8eef27cdadeeae375" kind="variable"><name>acknowledgeControlCharacter</name></member>
+    <member refid="class_hash_serial_1a3ba440a5e2b3cf170e91f4c3d4d3cdaa" kind="function"><name>HashSerial</name></member>
+    <member refid="class_hash_serial_1a7b5e28f89a56052dfad2077f24c03a9d" kind="function"><name>begin</name></member>
+    <member refid="class_hash_serial_1a408c006d67428cb35a48d201120d9870" kind="function"><name>update</name></member>
+    <member refid="class_hash_serial_1a38c88aca98f27ca71ba8e540a079e681" kind="function"><name>end</name></member>
+    <member refid="class_hash_serial_1adcd451d504d6a2b02e6ea3a13a79d214" kind="function"><name>available</name></member>
+    <member refid="class_hash_serial_1aaafae66ededbb19151df8103e8f5b845" kind="function"><name>availableForWrite</name></member>
+    <member refid="class_hash_serial_1a2a92bec9bd9337fdfac5f563f393ba1c" kind="function"><name>send</name></member>
+    <member refid="class_hash_serial_1a55ccbb6fdfb00b574848342e6dc955b3" kind="function"><name>send</name></member>
+    <member refid="class_hash_serial_1a79fa3f04d152363f08f2b59a9852fb70" kind="function"><name>send</name></member>
+    <member refid="class_hash_serial_1a7740039485a40238bceda0785a8c8dba" kind="function"><name>send</name></member>
+    <member refid="class_hash_serial_1ab753fd6b279c6d7219a80c367cfd8a29" kind="function"><name>send</name></member>
+    <member refid="class_hash_serial_1a97082abf84d1b7dad75baddc04a93873" kind="function"><name>send</name></member>
+    <member refid="class_hash_serial_1a3ebdef0b231206a49414fa23b5071664" kind="function"><name>send</name></member>
+    <member refid="class_hash_serial_1a31a53b3371726af230eedd98a367e08a" kind="function"><name>send</name></member>
+    <member refid="class_hash_serial_1a80b01a94f5befeb6e6a29822951a89d6" kind="function"><name>send</name></member>
+    <member refid="class_hash_serial_1a7e114c179d635688e4009b50954b5e11" kind="function"><name>readMessage</name></member>
+    <member refid="class_hash_serial_1af3ea8c6e1a72d2eff0773cbdc2010591" kind="function"><name>attachProcedure</name></member>
+    <member refid="class_hash_serial_1a2e7bcb5c5a8099fd85a04fa7972c1ca5" kind="function"><name>setAcknowledgedTimeout</name></member>
+    <member refid="class_hash_serial_1a7f114081771c5f0ae7551867dbd60b43" kind="function"><name>writeHash</name></member>
+    <member refid="class_hash_serial_1adc2e21031891d58dfb231df89b44e8d3" kind="function"><name>sendAcknowledge</name></member>
+    <member refid="class_hash_serial_1af1e146c799f9a610808040908618a638" kind="function"><name>generateHashCode</name></member>
+  </compound>
+  <compound refid="_hash_serial_8cpp" kind="file"><name>HashSerial.cpp</name>
+  </compound>
+  <compound refid="_hash_serial_8h" kind="file"><name>HashSerial.h</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+</doxygenindex>

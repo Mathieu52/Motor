@@ -1,0 +1,679 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.3" xml:lang="en-US">
+  <compounddef id="class_hash_serial" kind="class" language="C++" prot="public">
+    <compoundname>HashSerial</compoundname>
+    <includes refid="_hash_serial_8h" local="no">HashSerial.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_hash_serial_1a0f0756ae23b2ba0814760540250dc6a7" prot="private" static="no" mutable="no">
+        <type>HardwareSerial *</type>
+        <definition>HardwareSerial* HashSerial::serial</definition>
+        <argsstring></argsstring>
+        <name>serial</name>
+        <qualifiedname>HashSerial::serial</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/HashSerial.h" line="30" column="20" bodyfile="src/HashSerial.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_hash_serial_1ace0a62eb72cc1363742b6877e146113f" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String HashSerial::last_sent_message</definition>
+        <argsstring></argsstring>
+        <name>last_sent_message</name>
+        <qualifiedname>HashSerial::last_sent_message</qualifiedname>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/HashSerial.h" line="33" column="12" bodyfile="src/HashSerial.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_hash_serial_1a7c65e68572495488cf5b555a3eaa3596" prot="private" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long HashSerial::time_since_message</definition>
+        <argsstring></argsstring>
+        <name>time_since_message</name>
+        <qualifiedname>HashSerial::time_since_message</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/HashSerial.h" line="34" column="19" bodyfile="src/HashSerial.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_hash_serial_1adbcbe3fe9f4d9ac6a1e41d05bd98f107" prot="private" static="no" mutable="no">
+        <type>boolean</type>
+        <definition>boolean HashSerial::message_acknowledged</definition>
+        <argsstring></argsstring>
+        <name>message_acknowledged</name>
+        <qualifiedname>HashSerial::message_acknowledged</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/HashSerial.h" line="35" column="13" bodyfile="src/HashSerial.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_hash_serial_1a22bf09e08e78e568a448ea3c011b7319" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned HashSerial::acknowledged_timeout</definition>
+        <argsstring></argsstring>
+        <name>acknowledged_timeout</name>
+        <qualifiedname>HashSerial::acknowledged_timeout</qualifiedname>
+        <initializer>= 100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/HashSerial.h" line="37" column="14" bodyfile="src/HashSerial.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_hash_serial_1a9bc643eb0eb90c3ffb8c1d5247dd0244" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String HashSerial::message</definition>
+        <argsstring></argsstring>
+        <name>message</name>
+        <qualifiedname>HashSerial::message</qualifiedname>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/HashSerial.h" line="38" column="12" bodyfile="src/HashSerial.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_hash_serial_1af9a6d6a1a2c743000428e78455ff2e22" prot="private" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* HashSerial::procedure) (String message)</definition>
+        <argsstring>)(String message)</argsstring>
+        <name>procedure</name>
+        <qualifiedname>HashSerial::procedure</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/HashSerial.h" line="40" column="5" bodyfile="src/HashSerial.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_hash_serial_1a4e6b7273dbbcbbe431eda7175fca4a48" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int HashSerial::hashStrLength</definition>
+        <argsstring></argsstring>
+        <name>hashStrLength</name>
+        <qualifiedname>HashSerial::hashStrLength</qualifiedname>
+        <initializer>= 9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/HashSerial.h" line="43" column="22" bodyfile="src/HashSerial.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_hash_serial_1ac2aaf333c45e91e8eef27cdadeeae375" prot="private" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char HashSerial::acknowledgeControlCharacter</definition>
+        <argsstring></argsstring>
+        <name>acknowledgeControlCharacter</name>
+        <qualifiedname>HashSerial::acknowledgeControlCharacter</qualifiedname>
+        <initializer>= 0x06</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/HashSerial.h" line="44" column="23" bodyfile="src/HashSerial.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_hash_serial_1a3ba440a5e2b3cf170e91f4c3d4d3cdaa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HashSerial::HashSerial</definition>
+        <argsstring>(HardwareSerial &amp;serial)</argsstring>
+        <name>HashSerial</name>
+        <qualifiedname>HashSerial::HashSerial</qualifiedname>
+        <param>
+          <type>HardwareSerial &amp;</type>
+          <declname>serial</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor of <ref refid="class_hash_serial" kindref="compound">HashSerial</ref> <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: HardwareSerial, Serial used to send data </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/HashSerial.h" line="7" column="5" bodyfile="src/HashSerial.cpp" bodystart="10" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hash_serial_1a7b5e28f89a56052dfad2077f24c03a9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HashSerial::begin</definition>
+        <argsstring>(long speed)</argsstring>
+        <name>begin</name>
+        <qualifiedname>HashSerial::begin</qualifiedname>
+        <param>
+          <type>long</type>
+          <declname>speed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the data rate in bits per second (baud) for serial data transmission. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>speed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: in bits per second (baud). Allowed data types: long. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/HashSerial.h" line="8" column="10" bodyfile="src/HashSerial.cpp" bodystart="18" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hash_serial_1a408c006d67428cb35a48d201120d9870" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>String</type>
+        <definition>String HashSerial::update</definition>
+        <argsstring>()</argsstring>
+        <name>update</name>
+        <qualifiedname>HashSerial::update</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Look for confirmation that the last sent message has been received as well as look for received message (make sure they are valid, if valid trigger attached procedure) <simplesect kind="return"><para>String, A valid message in other case a blank string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/HashSerial.h" line="9" column="12" bodyfile="src/HashSerial.cpp" bodystart="33" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hash_serial_1a38c88aca98f27ca71ba8e540a079e681" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HashSerial::end</definition>
+        <argsstring>()</argsstring>
+        <name>end</name>
+        <qualifiedname>HashSerial::end</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Disables serial communication, allowing the RX and TX pins to be used for general input and output. To re-enable serial communication, call <computeroutput><ref refid="class_hash_serial_1a7b5e28f89a56052dfad2077f24c03a9d" kindref="member">HashSerial.begin()</ref></computeroutput>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/HashSerial.h" line="10" column="10" bodyfile="src/HashSerial.cpp" bodystart="25" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hash_serial_1adcd451d504d6a2b02e6ea3a13a79d214" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int HashSerial::available</definition>
+        <argsstring>()</argsstring>
+        <name>available</name>
+        <qualifiedname>HashSerial::available</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the number of bytes (characters) available for reading from the serial port. This is data that’s already arrived and stored in the serial receive buffer (which holds 64 bytes). <simplesect kind="return"><para>The number of bytes available to read. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/HashSerial.h" line="11" column="9" bodyfile="src/HashSerial.cpp" bodystart="73" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hash_serial_1aaafae66ededbb19151df8103e8f5b845" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int HashSerial::availableForWrite</definition>
+        <argsstring>()</argsstring>
+        <name>availableForWrite</name>
+        <qualifiedname>HashSerial::availableForWrite</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the number of bytes (characters) available for writing in the serial buffer without blocking the write operation. <simplesect kind="return"><para>The number of bytes available to write. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/HashSerial.h" line="12" column="9" bodyfile="src/HashSerial.cpp" bodystart="82" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hash_serial_1a2a92bec9bd9337fdfac5f563f393ba1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t HashSerial::send</definition>
+        <argsstring>(const String &amp;s)</argsstring>
+        <name>send</name>
+        <qualifiedname>HashSerial::send</qualifiedname>
+        <param>
+          <type>const String &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Prints data to the serial port as human-readable ASCII text preceded by it&apos;s hexadecimal hash code, followed by a carriage return character (ASCII 13, or &apos;\r&apos;) and a newline character (ASCII 10, or &apos;<linebreak/>
+&apos;). <simplesect kind="return"><para>returns the number of bytes written, though reading that number is optional. Data type: size_t. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/HashSerial.h" line="14" column="12" bodyfile="src/HashSerial.cpp" bodystart="154" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hash_serial_1a55ccbb6fdfb00b574848342e6dc955b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t HashSerial::send</definition>
+        <argsstring>(const char str[])</argsstring>
+        <name>send</name>
+        <qualifiedname>HashSerial::send</qualifiedname>
+        <param>
+          <type>const char</type>
+          <declname>str</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Prints data to the serial port as human-readable ASCII text preceded by it&apos;s hexadecimal hash code, followed by a carriage return character (ASCII 13, or &apos;\r&apos;) and a newline character (ASCII 10, or &apos;<linebreak/>
+&apos;). <simplesect kind="return"><para>returns the number of bytes written, though reading that number is optional. Data type: size_t. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/HashSerial.h" line="15" column="12" bodyfile="src/HashSerial.cpp" bodystart="165" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hash_serial_1a79fa3f04d152363f08f2b59a9852fb70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t HashSerial::send</definition>
+        <argsstring>(char c)</argsstring>
+        <name>send</name>
+        <qualifiedname>HashSerial::send</qualifiedname>
+        <param>
+          <type>char</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Prints data to the serial port as human-readable ASCII text preceded by it&apos;s hexadecimal hash code, followed by a carriage return character (ASCII 13, or &apos;\r&apos;) and a newline character (ASCII 10, or &apos;<linebreak/>
+&apos;). <simplesect kind="return"><para>returns the number of bytes written, though reading that number is optional. Data type: size_t. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/HashSerial.h" line="16" column="12" bodyfile="src/HashSerial.cpp" bodystart="176" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hash_serial_1a7740039485a40238bceda0785a8c8dba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t HashSerial::send</definition>
+        <argsstring>(unsigned char b, int base)</argsstring>
+        <name>send</name>
+        <qualifiedname>HashSerial::send</qualifiedname>
+        <param>
+          <type>unsigned char</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>base</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Prints data to the serial port as human-readable ASCII text preceded by it&apos;s hexadecimal hash code, followed by a carriage return character (ASCII 13, or &apos;\r&apos;) and a newline character (ASCII 10, or &apos;<linebreak/>
+&apos;). <simplesect kind="return"><para>returns the number of bytes written, though reading that number is optional. Data type: size_t. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/HashSerial.h" line="17" column="12" bodyfile="src/HashSerial.cpp" bodystart="187" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hash_serial_1ab753fd6b279c6d7219a80c367cfd8a29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t HashSerial::send</definition>
+        <argsstring>(int n, int base)</argsstring>
+        <name>send</name>
+        <qualifiedname>HashSerial::send</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>base</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Prints data to the serial port as human-readable ASCII text preceded by it&apos;s hexadecimal hash code, followed by a carriage return character (ASCII 13, or &apos;\r&apos;) and a newline character (ASCII 10, or &apos;<linebreak/>
+&apos;). <simplesect kind="return"><para>returns the number of bytes written, though reading that number is optional. Data type: size_t. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/HashSerial.h" line="18" column="12" bodyfile="src/HashSerial.cpp" bodystart="198" bodyend="203"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hash_serial_1a97082abf84d1b7dad75baddc04a93873" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t HashSerial::send</definition>
+        <argsstring>(unsigned int n, int base)</argsstring>
+        <name>send</name>
+        <qualifiedname>HashSerial::send</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>base</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Prints data to the serial port as human-readable ASCII text preceded by it&apos;s hexadecimal hash code, followed by a carriage return character (ASCII 13, or &apos;\r&apos;) and a newline character (ASCII 10, or &apos;<linebreak/>
+&apos;). <simplesect kind="return"><para>returns the number of bytes written, though reading that number is optional. Data type: size_t. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/HashSerial.h" line="19" column="12" bodyfile="src/HashSerial.cpp" bodystart="209" bodyend="214"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hash_serial_1a3ebdef0b231206a49414fa23b5071664" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t HashSerial::send</definition>
+        <argsstring>(long n, int base)</argsstring>
+        <name>send</name>
+        <qualifiedname>HashSerial::send</qualifiedname>
+        <param>
+          <type>long</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>base</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Prints data to the serial port as human-readable ASCII text preceded by it&apos;s hexadecimal hash code, followed by a carriage return character (ASCII 13, or &apos;\r&apos;) and a newline character (ASCII 10, or &apos;<linebreak/>
+&apos;). <simplesect kind="return"><para>returns the number of bytes written, though reading that number is optional. Data type: size_t. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/HashSerial.h" line="20" column="12" bodyfile="src/HashSerial.cpp" bodystart="220" bodyend="225"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hash_serial_1a31a53b3371726af230eedd98a367e08a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t HashSerial::send</definition>
+        <argsstring>(unsigned long n, int base)</argsstring>
+        <name>send</name>
+        <qualifiedname>HashSerial::send</qualifiedname>
+        <param>
+          <type>unsigned long</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>base</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Prints data to the serial port as human-readable ASCII text preceded by it&apos;s hexadecimal hash code, followed by a carriage return character (ASCII 13, or &apos;\r&apos;) and a newline character (ASCII 10, or &apos;<linebreak/>
+&apos;). <simplesect kind="return"><para>returns the number of bytes written, though reading that number is optional. Data type: size_t. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/HashSerial.h" line="21" column="12" bodyfile="src/HashSerial.cpp" bodystart="231" bodyend="236"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hash_serial_1a80b01a94f5befeb6e6a29822951a89d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t HashSerial::send</definition>
+        <argsstring>(double n, int digits)</argsstring>
+        <name>send</name>
+        <qualifiedname>HashSerial::send</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>digits</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Prints data to the serial port as human-readable ASCII text preceded by it&apos;s hexadecimal hash code, followed by a carriage return character (ASCII 13, or &apos;\r&apos;) and a newline character (ASCII 10, or &apos;<linebreak/>
+&apos;). <simplesect kind="return"><para>returns the number of bytes written, though reading that number is optional. Data type: size_t. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/HashSerial.h" line="22" column="12" bodyfile="src/HashSerial.cpp" bodystart="242" bodyend="247"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hash_serial_1a7e114c179d635688e4009b50954b5e11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>String</type>
+        <definition>String HashSerial::readMessage</definition>
+        <argsstring>()</argsstring>
+        <name>readMessage</name>
+        <qualifiedname>HashSerial::readMessage</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieve the last received message. <simplesect kind="return"><para>Last received message. Data type: String. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/HashSerial.h" line="24" column="12" bodyfile="src/HashSerial.cpp" bodystart="105" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hash_serial_1af3ea8c6e1a72d2eff0773cbdc2010591" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HashSerial::attachProcedure</definition>
+        <argsstring>(void(*procedure)(String message))</argsstring>
+        <name>attachProcedure</name>
+        <qualifiedname>HashSerial::attachProcedure</qualifiedname>
+        <param>
+          <type>void(*)(String message)</type>
+          <declname>procedure</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Attach a function to hashSerial. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>procedure</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: function that will be executed when a valid message is received </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/HashSerial.h" line="25" column="10" bodyfile="src/HashSerial.cpp" bodystart="113" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hash_serial_1a2e7bcb5c5a8099fd85a04fa7972c1ca5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HashSerial::setAcknowledgedTimeout</definition>
+        <argsstring>(unsigned long time)</argsstring>
+        <name>setAcknowledgedTimeout</name>
+        <qualifiedname>HashSerial::setAcknowledgedTimeout</qualifiedname>
+        <param>
+          <type>unsigned long</type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the maximum milliseconds to wait for Acknowledgedment before resending message. It defaults to 100 milliseconds. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: timeout duration in milliseconds. Allowed data types: unsigned long. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/HashSerial.h" line="27" column="10" bodyfile="src/HashSerial.cpp" bodystart="90" bodyend="92"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_hash_serial_1a7f114081771c5f0ae7551867dbd60b43" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t HashSerial::writeHash</definition>
+        <argsstring>(String key)</argsstring>
+        <name>writeHash</name>
+        <qualifiedname>HashSerial::writeHash</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Send the hash code of a String through serial. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: String that will be used to generate the hash code </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>will return the number of bytes written, though reading that number is optional. Data type: size_t. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/HashSerial.h" line="31" column="12" bodyfile="src/HashSerial.cpp" bodystart="122" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hash_serial_1adc2e21031891d58dfb231df89b44e8d3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HashSerial::sendAcknowledge</definition>
+        <argsstring>()</argsstring>
+        <name>sendAcknowledge</name>
+        <qualifiedname>HashSerial::sendAcknowledge</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Send Acknowledge character through serial. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/HashSerial.h" line="32" column="10" bodyfile="src/HashSerial.cpp" bodystart="97" bodyend="99"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_hash_serial_1af1e146c799f9a610808040908618a638" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>String</type>
+        <definition>String HashSerial::generateHashCode</definition>
+        <argsstring>(char *key)</argsstring>
+        <name>generateHashCode</name>
+        <qualifiedname>HashSerial::generateHashCode</qualifiedname>
+        <param>
+          <type>char *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Generate the hash code of String. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: String that will be used to generate the hash code </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>will return the hashcode in hexadecimal format. Data type: String. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/HashSerial.h" line="42" column="19" bodyfile="src/HashSerial.cpp" bodystart="132" bodyend="147"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/HashSerial.h" line="5" column="1" bodyfile="src/HashSerial.h" bodystart="5" bodyend="45"/>
+    <listofallmembers>
+      <member refid="class_hash_serial_1ac2aaf333c45e91e8eef27cdadeeae375" prot="private" virt="non-virtual"><scope>HashSerial</scope><name>acknowledgeControlCharacter</name></member>
+      <member refid="class_hash_serial_1a22bf09e08e78e568a448ea3c011b7319" prot="private" virt="non-virtual"><scope>HashSerial</scope><name>acknowledged_timeout</name></member>
+      <member refid="class_hash_serial_1af3ea8c6e1a72d2eff0773cbdc2010591" prot="public" virt="non-virtual"><scope>HashSerial</scope><name>attachProcedure</name></member>
+      <member refid="class_hash_serial_1adcd451d504d6a2b02e6ea3a13a79d214" prot="public" virt="non-virtual"><scope>HashSerial</scope><name>available</name></member>
+      <member refid="class_hash_serial_1aaafae66ededbb19151df8103e8f5b845" prot="public" virt="non-virtual"><scope>HashSerial</scope><name>availableForWrite</name></member>
+      <member refid="class_hash_serial_1a7b5e28f89a56052dfad2077f24c03a9d" prot="public" virt="non-virtual"><scope>HashSerial</scope><name>begin</name></member>
+      <member refid="class_hash_serial_1a38c88aca98f27ca71ba8e540a079e681" prot="public" virt="non-virtual"><scope>HashSerial</scope><name>end</name></member>
+      <member refid="class_hash_serial_1af1e146c799f9a610808040908618a638" prot="private" virt="non-virtual"><scope>HashSerial</scope><name>generateHashCode</name></member>
+      <member refid="class_hash_serial_1a3ba440a5e2b3cf170e91f4c3d4d3cdaa" prot="public" virt="non-virtual"><scope>HashSerial</scope><name>HashSerial</name></member>
+      <member refid="class_hash_serial_1a4e6b7273dbbcbbe431eda7175fca4a48" prot="private" virt="non-virtual"><scope>HashSerial</scope><name>hashStrLength</name></member>
+      <member refid="class_hash_serial_1ace0a62eb72cc1363742b6877e146113f" prot="private" virt="non-virtual"><scope>HashSerial</scope><name>last_sent_message</name></member>
+      <member refid="class_hash_serial_1a9bc643eb0eb90c3ffb8c1d5247dd0244" prot="private" virt="non-virtual"><scope>HashSerial</scope><name>message</name></member>
+      <member refid="class_hash_serial_1adbcbe3fe9f4d9ac6a1e41d05bd98f107" prot="private" virt="non-virtual"><scope>HashSerial</scope><name>message_acknowledged</name></member>
+      <member refid="class_hash_serial_1af9a6d6a1a2c743000428e78455ff2e22" prot="private" virt="non-virtual"><scope>HashSerial</scope><name>procedure</name></member>
+      <member refid="class_hash_serial_1a7e114c179d635688e4009b50954b5e11" prot="public" virt="non-virtual"><scope>HashSerial</scope><name>readMessage</name></member>
+      <member refid="class_hash_serial_1a2a92bec9bd9337fdfac5f563f393ba1c" prot="public" virt="non-virtual"><scope>HashSerial</scope><name>send</name></member>
+      <member refid="class_hash_serial_1a55ccbb6fdfb00b574848342e6dc955b3" prot="public" virt="non-virtual"><scope>HashSerial</scope><name>send</name></member>
+      <member refid="class_hash_serial_1a79fa3f04d152363f08f2b59a9852fb70" prot="public" virt="non-virtual"><scope>HashSerial</scope><name>send</name></member>
+      <member refid="class_hash_serial_1a7740039485a40238bceda0785a8c8dba" prot="public" virt="non-virtual"><scope>HashSerial</scope><name>send</name></member>
+      <member refid="class_hash_serial_1ab753fd6b279c6d7219a80c367cfd8a29" prot="public" virt="non-virtual"><scope>HashSerial</scope><name>send</name></member>
+      <member refid="class_hash_serial_1a97082abf84d1b7dad75baddc04a93873" prot="public" virt="non-virtual"><scope>HashSerial</scope><name>send</name></member>
+      <member refid="class_hash_serial_1a3ebdef0b231206a49414fa23b5071664" prot="public" virt="non-virtual"><scope>HashSerial</scope><name>send</name></member>
+      <member refid="class_hash_serial_1a31a53b3371726af230eedd98a367e08a" prot="public" virt="non-virtual"><scope>HashSerial</scope><name>send</name></member>
+      <member refid="class_hash_serial_1a80b01a94f5befeb6e6a29822951a89d6" prot="public" virt="non-virtual"><scope>HashSerial</scope><name>send</name></member>
+      <member refid="class_hash_serial_1adc2e21031891d58dfb231df89b44e8d3" prot="private" virt="non-virtual"><scope>HashSerial</scope><name>sendAcknowledge</name></member>
+      <member refid="class_hash_serial_1a0f0756ae23b2ba0814760540250dc6a7" prot="private" virt="non-virtual"><scope>HashSerial</scope><name>serial</name></member>
+      <member refid="class_hash_serial_1a2e7bcb5c5a8099fd85a04fa7972c1ca5" prot="public" virt="non-virtual"><scope>HashSerial</scope><name>setAcknowledgedTimeout</name></member>
+      <member refid="class_hash_serial_1a7c65e68572495488cf5b555a3eaa3596" prot="private" virt="non-virtual"><scope>HashSerial</scope><name>time_since_message</name></member>
+      <member refid="class_hash_serial_1a408c006d67428cb35a48d201120d9870" prot="public" virt="non-virtual"><scope>HashSerial</scope><name>update</name></member>
+      <member refid="class_hash_serial_1a7f114081771c5f0ae7551867dbd60b43" prot="private" virt="non-virtual"><scope>HashSerial</scope><name>writeHash</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
