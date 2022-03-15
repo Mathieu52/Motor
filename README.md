@@ -7,7 +7,7 @@
 # class `HashSerial` 
 
 Hash code based Arduino Serial extension class  
-`author` : Mathieu Durand 
+`author` : Mathieu Durand  
 `email` : [mathieu_durand@icloud.com](mailto:mathieu_durand@icloud.com)  
 `version` : 1.0.0  
 
