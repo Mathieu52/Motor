@@ -2,7 +2,6 @@
 
 #include "Arduino.h"
 #include "HashSerial.h"
-
 /**
  * Constructor of HashSerial
  * @param serial : HardwareSerial, Serial used to send data

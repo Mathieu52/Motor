@@ -1,7 +1,14 @@
+/**
+ @author Mathieu Durand : mathieu_durand@icloud.com
+ @version 1.0.0
+ */
 #ifndef HashSerial_h
 #define HashSerial_h
 #include "Arduino.h"
 
+/**
+ Hash code based Arduino Serial extension class
+ */
 class HashSerial {
   public:
     HashSerial(HardwareSerial &serial);
