@@ -2,13 +2,14 @@
 
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-`class `[`HashSerial`](#class_hash_serial) | Mathieu Durand : [mathieu_durand@icloud.com](mailto:mathieu_durand@icloud.com)
+`class `[`HashSerial`](#class_hash_serial) | Hash code based Arduino Serial extension class 
+Mathieu Durand : [mathieu_durand@icloud.com](mailto:mathieu_durand@icloud.com)
 
 # class `HashSerial` 
 
+Hash code based Arduino Serial extension class 
 Mathieu Durand : [mathieu_durand@icloud.com](mailto:mathieu_durand@icloud.com)
-
-1.0.0 Hash code based Arduino Serial extension class
+1.0.0
 
 ## Summary
 
