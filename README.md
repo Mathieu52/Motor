@@ -62,7 +62,7 @@ Get the number of bytes (characters) available for writing in the serial buffer 
 #### Returns
 The number of bytes available to write.
 
-#### `public size_t `[`send`](#class_hash_serial_1a2a92bec9bd9337fdfac5f563f393ba1c)`(any)` 
+#### `public size_t `[`send`](#class_hash_serial_1a2a92bec9bd9337fdfac5f563f393ba1c)`(val)` 
 
 Prints data to the serial port as human-readable ASCII text preceded by it's hexadecimal hash code, followed by a carriage return character (ASCII 13, or '\r') and a newline character (ASCII 10, or '\n')
 '). 
