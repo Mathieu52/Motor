@@ -36,18 +36,19 @@ String HashSerial::update() {
       send(last_sent_message);
     }
       
-    while(available() > 0 && serial->peek() == acknowledgeControlCharacter) {
+      while(available() > 0 && serial->peek() == acknowledgeControlCharacter) {
       serial->read();
       message_acknowledged = true;
     }
     
   }
 
-  if (available() == 0)
+  if (available() == 0 || serial->read() != startControlCharacter)
     return "";
-    
+
+
   message = serial->readString();
-  message = message.substring(0, message.length() - 1);
+  message = message.substring(0, message.length()-1);
 
   if (message.length() == 0)
     return "";
@@ -157,7 +158,7 @@ size_t HashSerial::send(const String &s) {
   time_since_message = millis();
   message_acknowledged = false;
   last_sent_message = s;
-  return writeHash(last_sent_message) + serial->println(s);
+  return serial->write(startControlCharacter) + writeHash(last_sent_message) + serial->println(s);
 }
 
 /**
@@ -168,7 +169,7 @@ size_t HashSerial::send(const char str[]) {
   time_since_message = millis();
   message_acknowledged = false;
   last_sent_message = String(str);
-  return writeHash(last_sent_message) + serial->println(str);
+  return serial->write(startControlCharacter) + writeHash(last_sent_message) + serial->println(str);
 }
 
 /**
@@ -179,7 +180,7 @@ size_t HashSerial::send(char c) {
   time_since_message = millis();
   message_acknowledged = false;
   last_sent_message = String(c);
-  return writeHash(last_sent_message) + serial->println(c);
+  return serial->write(startControlCharacter) + writeHash(last_sent_message) + serial->println(c);
 }
 
 /**
@@ -190,7 +191,7 @@ size_t HashSerial::send(unsigned char b, int base) {
   time_since_message = millis();
   message_acknowledged = false;
   last_sent_message = String(b, base);
-  return writeHash(last_sent_message) + serial->println(b, base);
+  return serial->write(startControlCharacter) + writeHash(last_sent_message) + serial->println(b, base);
 }
 
 /**
@@ -201,7 +202,7 @@ size_t HashSerial::send(int n, int base) {
   time_since_message = millis();
   message_acknowledged = false;
   last_sent_message = String(n, base);
-  return writeHash(last_sent_message) + serial->println(n, base);
+  return serial->write(startControlCharacter) + writeHash(last_sent_message) + serial->println(n, base);
 }
 
 /**
@@ -212,7 +213,7 @@ size_t HashSerial::send(unsigned int n, int base) {
   time_since_message = millis();
   message_acknowledged = false;
   last_sent_message = String(n, base);
-  return writeHash(last_sent_message) + serial->println(n, base);
+  return serial->write(startControlCharacter) + writeHash(last_sent_message) + serial->println(n, base);
 }
 
 /**
@@ -223,7 +224,7 @@ size_t HashSerial::send(long n, int base) {
   time_since_message = millis();
   message_acknowledged = false;
   last_sent_message = String(n, base);
-  return writeHash(last_sent_message) + serial->println(n, base);
+  return serial->write(startControlCharacter) + writeHash(last_sent_message) + serial->println(n, base);
 }
 
 /**
@@ -234,7 +235,7 @@ size_t HashSerial::send(unsigned long n, int base) {
   time_since_message = millis();
   message_acknowledged = false;
   last_sent_message = String(n, base);
-  return writeHash(last_sent_message) + serial->println(n, base);
+  return serial->write(startControlCharacter) + writeHash(last_sent_message) + serial->println(n, base);
 }
 
 /**
@@ -245,5 +246,5 @@ size_t HashSerial::send(double n, int digits) {
   time_since_message = millis();
   message_acknowledged = false;
   last_sent_message = String(n, digits);
-  return writeHash(last_sent_message) + serial->println(n, digits);
+  return serial->write(startControlCharacter) + writeHash(last_sent_message) + serial->println(n, digits);
 }

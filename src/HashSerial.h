@@ -47,5 +47,6 @@ class HashSerial {
     static String generateHashCode(char* key);
     static const int hashStrLength = 9;
     static const char acknowledgeControlCharacter = 0x06;
+    static const char startControlCharacter = 0x02;
 };
 #endif
