@@ -94,3 +94,6 @@ dkms.conf
 **/xml
 /api.md
 /Doxyfile
+
+### Useless ###
+.DS_Store
