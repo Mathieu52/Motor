@@ -87,3 +87,10 @@ dkms.conf
 .history
 
 # End of https://www.gitignore.io/api/c,c++,visualstudiocode
+
+### My own file ###
+**/html
+**/latex
+**/xml
+/api.md
+/Doxyfile
