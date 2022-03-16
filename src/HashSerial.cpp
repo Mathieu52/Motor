@@ -35,7 +35,7 @@ String HashSerial::update() {
     if (millis() - time_since_message > acknowledged_timeout) {
       send(last_sent_message);
     }
-    
+      
     while(available() > 0 && serial->peek() == acknowledgeControlCharacter) {
       serial->read();
       message_acknowledged = true;
@@ -43,6 +43,9 @@ String HashSerial::update() {
     
   }
 
+  if (available() == 0)
+    return "";
+    
   message = serial->readString();
   message = message.substring(0, message.length() - 1);
 
