@@ -12,8 +12,8 @@ class Motor {
 
     /**
      */
-    int speed() const
-    boolean direction() const
+    int speed();
+    boolean direction();
     
     Motor (const unsigned int forwardPin, const unsigned int backwardPin);
     void control(int throttle);
