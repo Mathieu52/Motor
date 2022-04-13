@@ -10,12 +10,10 @@
 class Motor {
   public:
 
-    int speed() const {
-      return speed_m;
-    }
-    boolean direction() const {
-      return direction_m;
-    }
+    /**
+     */
+    int speed() const
+    boolean direction() const
     
     Motor (const unsigned int forwardPin, const unsigned int backwardPin);
     void control(int throttle);

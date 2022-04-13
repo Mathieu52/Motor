@@ -12,9 +12,8 @@ Control motors
 
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-`public inline int `[`speed`](#class_motor_1a783b20d824e9d5e9d3b39407657c06b5)`() const` | 
-`public inline boolean `[`direction`](#class_motor_1a0d1e9109147a1620ba2231572f64502d)`() const` | 
-`public  `[`Motor`](#class_motor_1ab90424518c4826de76d15488ca90aeb6)`(const unsigned int forwardPin,const unsigned int backwardPin)` | Contructor of [Motor](#class_motor). 
+`public int const unsigned int `[`backwardPin`](#class_motor_1add809ca1e399244ea416587289a12f8e) | 
+`public int `[`speed`](#class_motor_1a221a586f3a1b6a75571a94ba58c8b5f8)`() const` | The speed of the motor (0 - 255)
 `public void `[`control`](#class_motor_1a2efba88aedaeaab3280432b8bbe8d874)`(int throttle)` | Throttle the [Motor](#class_motor) using integer value between -255 and 255. 
 `public void `[`reverse`](#class_motor_1a1e1cfdd2808f7cb6a3816b8089e135db)`()` | Reverse the [Motor](#class_motor) direction.
 `public void `[`setDirection`](#class_motor_1a20f404b9f19e3bd9b24f65cfa093da8c)`(boolean direction)` | Change the [Motor](#class_motor) direction. 
@@ -22,17 +21,11 @@ Control motors
 
 ## Members
 
-#### `public inline int `[`speed`](#class_motor_1a783b20d824e9d5e9d3b39407657c06b5)`() const` 
+#### `public int const unsigned int `[`backwardPin`](#class_motor_1add809ca1e399244ea416587289a12f8e) 
 
-#### `public inline boolean `[`direction`](#class_motor_1a0d1e9109147a1620ba2231572f64502d)`() const` 
+#### `public int `[`speed`](#class_motor_1a221a586f3a1b6a75571a94ba58c8b5f8)`() const` 
 
-#### `public  `[`Motor`](#class_motor_1ab90424518c4826de76d15488ca90aeb6)`(const unsigned int forwardPin,const unsigned int backwardPin)` 
-
-Contructor of [Motor](#class_motor). 
-#### Parameters
-* `forwardPin` : forward pin of the motor (forward direction control) 
-
-* `backwardPin` : backward pin of the motor (backward direction control)
+The speed of the motor (0 - 255)
 
 #### `public void `[`control`](#class_motor_1a2efba88aedaeaab3280432b8bbe8d874)`(int throttle)` 
 

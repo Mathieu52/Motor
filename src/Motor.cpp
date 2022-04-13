@@ -10,6 +10,18 @@
 #include "Motor.h"
 
 /**
+ * The speed of the motor (0 - 255)
+ */
+int Motor::speed() const {
+  return speed_m;
+}
+/**
+ * The direction of the motor (true : Forward, false : Backward)
+ */
+boolean Motor::direction() const {
+  return direction_m;
+}
+/**
  * Contructor of Motor.
  * @param forwardPin : forward pin of the motor (forward direction control)
  * @param backwardPin : backward pin of the motor (backward direction control)
