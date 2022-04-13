@@ -85,3 +85,4 @@ Attach a function to hashSerial.
 Sets the maximum milliseconds to wait for Acknowledgedment before resending message. It defaults to 100 milliseconds. 
 #### Parameters
 * `time` : timeout duration in milliseconds. Allowed data types: unsigned long.
+# Motor
