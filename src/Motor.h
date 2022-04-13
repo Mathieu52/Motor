@@ -4,6 +4,9 @@
 #define HashSerial_h
 #include "Arduino.h"
 
+/**
+ Control motors
+ */
 class Motor {
   public:
 
