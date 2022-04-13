@@ -95,6 +95,7 @@ dkms.conf
 /api.md
 /Doxyfile
 *.app
+*.bash
 
 ### Useless ###
 .DS_Store
